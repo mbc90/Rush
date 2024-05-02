@@ -1,6 +1,5 @@
 #+TITLE: Rush!
 #+AUTHOR: mbcc
-#+OPTIONS: toc:nil
 
 * Rush!
 Rush stands for Rust Shell
