@@ -1,0 +1,27 @@
+#+TITLE: Rush!
+#+AUTHOR: mbcc
+#+OPTIONS: toc:nil
+
+* Rush!
+Rush stands for Rust Shell
+it is a very basic shell I wrote to get a little familiar with rust
+** Builtin
+*** cd
+just a basic plain-old cd to change directories whenever you fell like it, hopefully with some helpful error messages. 
+*** pwd
+will display the current dir.
+*** hostname
+display the hostname, the crate i used says it will work on windows, but I never checked due to not wanting to boot up windows.
+*** mkdir
+just calling mkdir will make a directory but will not create the parents.
+it will accept the flag *-p* to make the parent directories.
+#+begin_src sh
+  # normal mkdir
+  mkdir foo
+  # make parents
+  mkdir -p foo/bar
+#+end_src
+*** exit
+it exits, that is it.
+** everything else!
+will spawn a process and execute whatever program you call.
