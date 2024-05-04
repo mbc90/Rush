@@ -1,5 +1,5 @@
 //=====================================================================================================================
-// My first rust program!
+// My first small rust program! 
 // It is a simple shell with only a few builtins, I have made a few of these.
 // One in C and another in Zig(Still need to add [*:0] strings, found a way to do it but lost interest in the program)
 //=====================================================================================================================
