@@ -12,7 +12,8 @@ fn main() {
         // start loop
         println!("{} {}", "Welcome to", "Rush!".blue().italic().bold());
         loop {
-        print!("{} ", "~$".purple().bold());
+        println!("{}", current_dir().unwrap().display());
+        print!("{} ", "$>".purple().bold());
         io::stdout().flush().expect("Flush failed!"); // flush the stdout so the print above appears
         args.clear();   // clear out args vector
         // read in line
@@ -68,9 +69,10 @@ fn main() {
                     match output {
                     Ok(mut output) => {let _ = output.wait();},
                     Err(e) => eprintln!("{} {}", "Error:".red(),e),
-               }
+                       }
              }
            }
+            println!(" ");
         }
    }
 }
@@ -79,5 +81,5 @@ fn help_msg() {
     println!("{} is a simple shell with not very many features", "Rush".blue().bold().italic());
     println!("The best help I can give is either look at the README or at the source code");
     println!("The only builtin that accepts any flags is {}, which will accept {} to make any parent directories", "mkdir".purple().bold(), "-p".bold().purple());
-    println!("Have fun!, and please try and break it!");
+    println!("Have fun! And please try and break it!");
 }
