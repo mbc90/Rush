@@ -22,9 +22,9 @@ fn main() {
             .read_line(&mut buffer)
             .expect("Failed to read line!");
         // create iterator, split by whitespace
-        let itr = buffer.trim().split_whitespace();
+        let buffer_split = shell_words::split(&buffer).expect("Failed to split buffer!");
         // push into vector
-        for part in itr {
+        for part in buffer_split {
             args.push(part.into());
         }
         //======================================
